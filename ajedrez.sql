@@ -58,7 +58,8 @@ CREATE TABLE EQUIPAR (
     codigoMedio INT,
     PRIMARY KEY (nombreHotel, nombreSala, codigoMedio),
     FOREIGN KEY (codigoMedio) REFERENCES MEDIOS(codigo),
-    FOREIGN KEY (nombreSala) REFERENCES SALAS(nombreSala)
+    FOREIGN KEY (nombreSala) REFERENCES SALAS(nombreSala),
+    FOREIGN KEY (nombreHotel) REFERENCES SALAS(nombreHotel)
 );
 CREATE TABLE PARTIDAS (
     numero INT,
